@@ -89,7 +89,7 @@
 		  if (u=="Apagado")
 		  {
 			console.log("Apagado");
-			document.getElementById("historial").innerHTML=message.payloadString;
+			document.getElementById("led").innerHTML=message.payloadString;
 		  }
 	 
 	 
