@@ -5,27 +5,20 @@
 
 
 
-function Clean(){	
-	//alert("led off");
-	console.log("borrando historial");
-	message = new Paho.MQTT.Message(" ");
-    	message.destinationName = "hfcasanova.fie@unach.edu.ec/claseprueba";
-    	client.send(message);
-	//document.getElementById("sensor").innerHTML="led off";
-}
 
-	function Histo1(){	
+
+	function prender(){	
 	//alert("led off");
-	console.log("Primer historial");
-	message = new Paho.MQTT.Message("Imprimiendo Primer historial, espere un momento");
+	console.log("Led encendido");
+	message = new Paho.MQTT.Message("ENCENDER");
     	message.destinationName = "hfcasanova.fie@unach.edu.ec/claseprueba";
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
-	function Histo2(){	
+	function apagar(){	
 	//alert("led off");
-	console.log("Segundo historial");
-	message = new Paho.MQTT.Message("Imprimiendo Segundo historial, espere un momento");
+	console.log("Led apagado");
+	message = new Paho.MQTT.Message("APAGAR");
     	message.destinationName = "hfcasanova.fie@unach.edu.ec/claseprueba";
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
@@ -87,31 +80,19 @@ function Clean(){
 	  
 	  
 	  //var x = document.getElementById("myText").value;
-	  if (u=="Imprimiendo historial 1, espere un momento")
+	  if (u=="Encendido")
 	  {
-	console.log("informacion relevante");	
-	document.getElementById("historial").innerHTML=message.payloadString;
+	console.log("Encendido");	
+	document.getElementById("led").innerHTML=message.payloadString;
 	  }
 	  else 
-		  if (u=="Imprimiendo historial 2, espere un momento")
+		  if (u=="Apagado")
 		  {
-			console.log("informacion relevante");
+			console.log("Apagado");
 			document.getElementById("historial").innerHTML=message.payloadString;
 		  }
 	 
-	  else 
-		  if (u=="hola desde la web")
-		{ 
-		console.log("informacion relevante");	 
-	 // document.getElementById("historial").innerHTML=message.payloadString;
-		}
-	  
-	  
-	  
-	  
-	 	  else {
-	  document.getElementById("historial").innerHTML=message.payloadString;
-	  }
+	 
 	  
   }
 
