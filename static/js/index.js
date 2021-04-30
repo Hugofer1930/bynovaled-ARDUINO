@@ -83,13 +83,13 @@
 	  if (u=="Encendido")
 	  {
 	console.log("Encendido");	
-	document.getElementById("led").innerHTML=message.payloadString;
+	document.getElementById("led").innerHTML="Encendido";
 	  }
 	  else 
 		  if (u=="Apagado")
 		  {
 			console.log("Apagado");
-			document.getElementById("led").innerHTML=message.payloadString;
+			document.getElementById("led").innerHTML=console;
 		  }
 	 
 	 
