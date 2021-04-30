@@ -80,16 +80,16 @@
 	  
 	  
 	  //var x = document.getElementById("myText").value;
-	  if (u=="Encendido")
+	  if (u=="ENCENDER")
 	  {
 	console.log("Encendido");	
 	document.getElementById("led").innerHTML="Encendido";
 	  }
 	  else 
-		  if (u=="Apagado")
+		  if (u=="APAGAR")
 		  {
 			console.log("Apagado");
-			document.getElementById("led").innerHTML=console;
+			document.getElementById("led").innerHTML="Apagado";
 		  }
 	 
 	 
